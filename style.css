@@ -143,20 +143,16 @@ section {
     background-color: #f9f9f9;
 }
 
-/* #expert-mentor .mentor-slider {
+#expert-mentor .mentor-slider {
     display: flex;
-    overflow: hidden;
-}
-
-#expert-mentor .slider-container {
-    display: flex;
-    animation: scroll 15s linear infinite;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 #expert-mentor .mentor-slide {
     display: inline-block;
-    margin-right: 20px;
     text-align: center;
+    margin: 10px;
 }
 
 #expert-mentor .mentor-slide img {
@@ -164,11 +160,16 @@ section {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
+    display: block;
+    margin: 0 auto;
 }
 
 #expert-mentor .mentor-slide p {
     margin-top: 10px;
-} */
+    font-size: 16px;
+    color: #333;
+}
+
 .scroll {
     position: relative;
     width: 100%;

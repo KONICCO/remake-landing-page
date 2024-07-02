@@ -19,23 +19,14 @@ document.addEventListener('DOMContentLoaded', () => {
         section.classList.add('fade-in');
         observer.observe(section);
     });
-    
-    
 });
-// document.addEventListener('DOMContentLoaded', () => {
-//     AOS.init({
-//         duration: 1000,
-//         once: true
-//     });
-// });
+
 document.addEventListener('DOMContentLoaded', function() {
     AOS.init({
         duration: 800,
         easing: 'slide',
     });
-    
 });
-
 
 const dynamicText = document.querySelector("h1 span");
 const words = ["Global", "Masa Depan Indonesia"];
