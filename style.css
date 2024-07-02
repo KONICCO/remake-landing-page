@@ -237,6 +237,7 @@ footer {
     opacity: 1;
 }
 #talenta-digital {
+    text-align: center;
     background-color: #f0f0f0;
     padding: 60px 20px;
 }
@@ -366,4 +367,32 @@ form button:hover {
 
 form button:focus {
     outline: none;
+}
+#contact {
+    text-align: center;
+    /* padding: 40px 20px; */
+    background-color: #f9f9f9;
+}
+.contact-form{
+    text-align: left;
+    padding: 40px 50px;
+    /* background-color: #f9f9f9; */
+}
+#footer {
+    text-align: center; /* Center the content horizontally */
+    padding: 20px; /* Optional padding */
+    background-color: #f4f4f4; /* Optional background color */
+}
+
+.footer-content {
+    text-align: left; /* Align text to the left */
+    display: inline-block; /* Make the content inline block to center it */
+}
+
+.footer-content p, .footer-content .social-media-links {
+    margin: 10px 0; /* Optional margin */
+}
+
+.social-media-links a {
+    margin: 0 10px; /* Optional margin between social media icons */
 }

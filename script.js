@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
     
+    
 });
 // document.addEventListener('DOMContentLoaded', () => {
 //     AOS.init({
@@ -32,23 +33,39 @@ document.addEventListener('DOMContentLoaded', function() {
         duration: 800,
         easing: 'slide',
     });
+    
 });
 
-// script.js
-// document.addEventListener('DOMContentLoaded', () => {
-//     const sliderContainer = document.querySelector('.slider-container');
-//     const sliderWidth = sliderContainer.scrollWidth;
-//     let scrollPosition = 0;
 
-//     function scrollSlider() {
-//         scrollPosition += 2; // Adjust scroll speed here
-//         if (scrollPosition >= sliderWidth / 8) {
-//             scrollPosition = 0;
-//         }
-//         sliderContainer.style.transform = `translateX(-${scrollPosition}px)`;
-//         requestAnimationFrame(scrollSlider);
-//     }
+const dynamicText = document.querySelector("h1 span");
+const words = ["Global", "Masa Depan Indonesia"];
 
-//     scrollSlider();
-// });
+// Variables to track the position and deletion status of the word
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
 
+const typeEffect = () => {
+    const currentWord = words[wordIndex];
+    const currentChar = currentWord.substring(0, charIndex);
+    dynamicText.textContent = currentChar;
+    dynamicText.classList.add("stop-blinking");
+
+    if (!isDeleting && charIndex < currentWord.length) {
+        // If condition is true, type the next character
+        charIndex++;
+        setTimeout(typeEffect, 200);
+    } else if (isDeleting && charIndex > 0) {
+        // If condition is true, remove the previous character
+        charIndex--;
+        setTimeout(typeEffect, 100);
+    } else {
+        // If word is deleted then switch to the next word
+        isDeleting = !isDeleting;
+        dynamicText.classList.remove("stop-blinking");
+        wordIndex = !isDeleting ? (wordIndex + 1) % words.length : wordIndex;
+        setTimeout(typeEffect, 1200);
+    }
+}
+
+typeEffect();
