@@ -7,34 +7,44 @@ body {
 
 header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #4CAF50;
-    color: white;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #fff; /* Atur warna latar belakang sesuai kebutuhan */
+    border-bottom: 1px solid #ddd; /* Tambahkan border jika diperlukan */
 }
 
-header img {
-    height: 50px;
+.logo {
+    width: 100px; /* Sesuaikan lebar gambar logo */
+    height: auto; /* Mempertahankan rasio aspek gambar */
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 20px; /* Jarak antara item menu */
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
-    display: inline;
+    margin: 0;
 }
 
 nav ul li a {
-    color: white;
     text-decoration: none;
+    color: #333; /* Atur warna teks menu */
+    font-size: 16px; /* Sesuaikan ukuran font sesuai kebutuhan */
+    padding: 5px 10px;
 }
 
+nav ul li a:hover {
+    color: #007bff; /* Atur warna saat hover */
+}
+
+
 #hero {
-    background: url('https://via.placeholder.com/1920x600') no-repeat center center;
+    background: url('https://jayjay.co/wp-content/uploads/2023/09/11.png') no-repeat center center;
     background-size: cover;
     color: white;
     text-align: center;
@@ -42,7 +52,7 @@ nav ul li a {
 }
 
 .hero-content {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(38, 121, 255, 0.5);
     display: inline-block;
     padding: 20px;
 }
@@ -53,7 +63,8 @@ section {
 
 #trusted-by {
     text-align: center;
-    padding: 40px 20px;
+    padding: 40px 10px;
+    /* margin: ; */
     background-color: #f9f9f9;
 }
 
@@ -61,6 +72,11 @@ section {
     display: flex;
     justify-content: center;
     overflow: hidden;
+}
+.partner-logo {
+    width: 180px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px; /* Add some spacing around the images */
 }
 
 #trusted-by .slider {
@@ -351,7 +367,7 @@ form textarea {
 form button {
     margin-top: 1rem;
     padding: 0.75rem 1.5rem;
-    background-color: #4CAF50;
+    background-color: #e843f3;
     color: white;
     border: none;
     border-radius: 8px;
@@ -361,7 +377,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #45a049;
+    background-color: #091340;
     transform: scale(1.05);
 }
 
@@ -395,4 +411,9 @@ form button:focus {
 
 .social-media-links a {
     margin: 0 10px; /* Optional margin between social media icons */
+}
+#about {
+    text-align: center; /* Center the content horizontally */
+    padding: 20px; /* Optional padding */
+
 }
