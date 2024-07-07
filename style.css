@@ -3,6 +3,11 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* display: flex; */
+    flex-direction: column;
+    display: flex; 
+    /* align-items: center;  */
+    /* justify-content: center;  */
 }
 
 header {
@@ -407,7 +412,7 @@ form button:focus {
 }
 
 .footer-content p, .footer-content .social-media-links {
-    margin: 10px 0; /* Optional margin */
+    margin: 10px 0; 
 }
 
 .social-media-links a {
@@ -417,4 +422,153 @@ form button:focus {
     text-align: center; /* Center the content horizontally */
     padding: 20px; /* Optional padding */
 
+}
+/* Gaya untuk tombol login */
+nav ul li .btn-login {
+    background-color: #007bff; /* Warna latar belakang tombol */
+    color: #ffffff; /* Warna teks tombol */
+    padding: 5px 15px; /* Padding untuk tombol */
+    border-radius: 5px; /* Sudut membulat untuk tombol */
+    transition: background-color 0.3s; /* Transisi halus untuk perubahan warna */
+}
+
+nav ul li .btn-login:hover {
+    background-color: #0056b3; /* Warna latar belakang tombol saat hover */
+}
+  
+.wrapper { 
+    /* max-width: 1100px;  */
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    position: relative;
+        /* align-items: center;  */
+    /* justify-content: center;  */
+} 
+  
+.wrapper i { 
+    height: 50px; 
+    width: 50px; 
+    background: rgb(53, 149, 213); 
+    text-align: center; 
+    line-height: 50px; 
+    border-radius: 50%; 
+    cursor: pointer; 
+    position: absolute; 
+    top: 50%; 
+    font-size: 1.25 rem; 
+    transform: translateY(-50%); 
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23); 
+  
+} 
+#left, #right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    cursor: pointer;
+    color: black;
+}
+#left {
+    left: 20px;
+}
+#right {
+    right: 20px;
+}
+  
+.wrapper .carousel { 
+    display: grid; 
+    grid-auto-flow: column; 
+    grid-auto-columns: calc((100% / 3) - 12px); 
+    gap: 16px; 
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory; 
+    scroll-behavior: smooth; 
+    scrollbar-width: 0; 
+} 
+  
+.carousel::-webkit-scrollbar { 
+    display: none; 
+} 
+  
+.carousel :where(.card, .img) { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+} 
+  
+.carousel.dragging { 
+    scroll-snap-type: none; 
+    scroll-behavior: auto; 
+} 
+  
+.carousel.no-transition { 
+    scroll-behavior: auto; 
+} 
+  
+.carousel.dragging .card { 
+    cursor: grab; 
+    user-select: none; 
+} 
+  
+.carousel .card { 
+    scroll-snap-align: start; 
+    height: 340px; 
+    list-style: none; 
+    background: #fff; 
+    border-radius: 8px; 
+    display: flex; 
+    cursor: pointer; 
+    width: 98%; 
+    padding-bottom: 15px; 
+    align-items: center; 
+    justify-content: center; 
+    flex-direction: column; 
+} 
+  
+.card .img { 
+    background: rgb(30, 33, 207); 
+    width: 145px; 
+    height: 145px; 
+    border-radius: 50%; 
+  
+} 
+  
+.card .img img { 
+    width: 140px; 
+    height: 140px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+    border: 4px solid #fff; 
+} 
+  
+.card h2 { 
+    font-weight: 500; 
+    font-size: 1.56rem; 
+    margin: 30px 0 5px; 
+} 
+  
+.card span { 
+    color: #6a6d78; 
+    font-size: 1.31rem; 
+  
+} 
+  
+@media screen and (max-width: 900px) { 
+    .wrapper .carousel { 
+        grid-auto-columns: calc((100% / 2) - 9px); 
+  
+    } 
+} 
+  
+@media screen and (max-width: 600px) { 
+    .wrapper .carousel { 
+        grid-auto-columns: 100%; 
+  
+    } 
+}
+.Beasiswa{
+    text-align: center;
 }
